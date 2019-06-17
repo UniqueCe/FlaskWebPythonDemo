@@ -19,7 +19,7 @@ def index():
 
 @app.route('/user')
 def user():
-    return '<h1>hello, user!</h1>'
+    return render_template('user.html', name="User")
 
 @app.route('/user/<name>')
 def username(name):

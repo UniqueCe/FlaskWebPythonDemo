@@ -3,15 +3,6 @@
 
 {% block title %} Flasky {% endblock %}
 
-<!-- P30 实例3-10 定义收藏夹图标   ---！！！貌似有点问题！！！---
-{% block head %}
-{{ super() }}
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-{% endblock %}
--->
-
-
 
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
@@ -26,7 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Flasky</a>
+            <a class="navbar-brand" href="http://docs.jinkan.org/docs/flask/index.html" target="_blank">Flasky</a>
         </div>
 
         <div class="navbar-collapse collapse">
@@ -42,6 +33,8 @@
 {% block content %}
 <div class="container">
     {% block page_content %} {% endblock %}
+    <p>The local date and time is {{ moment(current_time).format('LLL') }}</p>
+    <p>The was {{ moment(current_time).fromNow(refresh=True) }}</p>
 </div>
 {% endblock %}
 
@@ -49,4 +42,5 @@
 {% block scripts %}
 {{ super() }}
 {{ moment.include_moment()}}
+{{ moment.locale('zh-CN')}}
 {% endblock %}

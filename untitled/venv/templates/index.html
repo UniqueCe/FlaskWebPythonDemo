@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
-    <h1>这是index </h1>
-    <p>The local date and time is {{ moment(current_time).format('LLL') }}</p>
-    <p>The was {{ moment(current_time).fromNow(refresh=True) }}</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %} Flasky - Sever Error {% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1> index </h1>
+</div>
+{% endblock %}
