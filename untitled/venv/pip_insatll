@@ -1,2 +1,2 @@
-1、  pip install flask-wtf (P34)
-2、  pip install flask-wtf (P34)
+1、  pip3 install flask-wtf (P34)
+2、  pip3 install flask-sqlalchemy (P47)
